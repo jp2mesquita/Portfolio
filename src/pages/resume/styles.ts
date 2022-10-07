@@ -6,7 +6,7 @@ export const PageTitle = styled.div`
   opacity: .1;
   align-items: center;
   margin-top: 6rem;
-  margin-bottom: 1.5rem;
+ 
 
   h1{
   margin: 0;
@@ -17,16 +17,30 @@ export const PageTitle = styled.div`
 `
 
 export const GridContainer = styled.div`
-    position: relative;
-    overflow: visible;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(4, minmax(50px, 1fr));
-    grid-auto-rows: min-content;
-    grid-template-rows: repeat(3, min-content);
-    width: 100%;
-    height: min-content;
-    flex: 0 0 auto;
-    gap: 20px;
-    padding: 0px;
+    display: flex;
+
+    >div{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      gap: 2rem;
+
+      div{
+        display: flex;
+        /* background-color: red; */
+      }
+    }
+`
+
+export const CardFooter = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
 `

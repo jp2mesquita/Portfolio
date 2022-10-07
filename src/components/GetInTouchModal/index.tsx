@@ -51,16 +51,16 @@ export function GetInTouchModal(){
             
             <ul>
               <li>
-                <FontAwesomeIcon icon={faInstagram} size={'xl'}/>
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faTwitter} size={'xl'}/>
+                <FontAwesomeIcon icon={faLinkedin} size={'xl'}/>
               </li>
               <li>
                 <FontAwesomeIcon icon={faGithub} size={'xl'}/>
               </li>
               <li>
-                <FontAwesomeIcon icon={faLinkedin} size={'xl'}/>
+                <FontAwesomeIcon icon={faInstagram} size={'xl'}/>
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faTwitter} size={'xl'}/>
               </li>
 
             </ul>

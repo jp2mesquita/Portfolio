@@ -36,7 +36,7 @@ export default function BeautySalon(){
   return(
     <Container>
       <PageTitle>
-        <h1>Beauty Salon</h1>
+        <h1>Beautysalon</h1>
       </PageTitle>
 
       <ExternalLinks>

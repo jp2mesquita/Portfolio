@@ -13,7 +13,7 @@ export const SliderContainer = styled.section`
     section{
       height: 100%;
       display: flex;
-      animation: scrolling 12s linear infinite;
+      animation: scrolling 30s linear infinite;
 
       span{
         border-radius: 20px;
@@ -23,9 +23,9 @@ export const SliderContainer = styled.section`
       }
     }
 
-    section:hover{
+    /* section:hover{
       animation-play-state: paused;
-    }
+    } */
   }
 
   @keyframes scrolling{

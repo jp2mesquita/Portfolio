@@ -123,7 +123,7 @@ export default function Home() {
     <Card>
       <Link href={'/projects'}>
         <picture>
-          <Image src={githubBlog} alt='' width={250} height={150}   objectFit='fill' />
+          <Image src={githubBlog} alt='' width={200} height={150}   objectFit='fill' />
         </picture>
 
         <CardFooter>
@@ -184,6 +184,7 @@ export default function Home() {
     </Card>
 
     <Card >
+      <Link href={'/resume'}>
         <div>
           <FontAwesomeIcon 
             icon={faAddressCard} 
@@ -203,6 +204,7 @@ export default function Home() {
               />
           </div>
         </CardFooter>
+      </Link>
     </Card>
 
 
@@ -228,7 +230,7 @@ export default function Home() {
 
 
     <Card isMedium={true} isLarge={true}>
-      <Link href={'/projects'}>
+      <Link href={'/projects/beautysalon'}>
         <picture>
           <Image src={beautySalonLogo} alt='' width={250} height={'100%'} objectFit="fill"/>
         </picture>

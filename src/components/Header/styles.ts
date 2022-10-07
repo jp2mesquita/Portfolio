@@ -1,23 +1,5 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: center; */
-  min-height: 100vh;
-  max-width: 1416px;
-  min-width: 380px;
- 
-  margin-inline: auto;
-  padding-inline: 2rem;
-  position: relative;
-
-  @media (max-width: 1400px){
-    max-width: 1180px;
-  }
-
-`
 export const HeaderContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -40,7 +22,7 @@ export const PageHeader = styled.header`
   top: 0;
   background-color: ${(props) => props.theme["background"]};
   z-index: 1;
-  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, .05); */
+ 
 
   
   h1{
@@ -55,13 +37,19 @@ export const PageHeader = styled.header`
     list-style: none;
     gap: 2rem;
     font-size: 1.25rem;
+
+    .active{
+      color: ${(props) => props.theme["yellow"]};
+    }
     a{
       color: ${(props) => props.theme["base-text"]};
+      /* font-weight: bold; */
 
       transition: color .2s;
     }
     a:hover{
-      color: ${(props) => props.theme["yellow-dark"]};;
+      color: ${(props) => props.theme.yellow}
+      
     }
     
   }
@@ -111,4 +99,3 @@ export const PageHeader = styled.header`
   }
 
 `
-

@@ -26,6 +26,10 @@ export const GridContainer =styled.div`
     justify-content: flex-end;
 
   }
+  p{
+    font-size: 1.25rem;
+    text-align: justify;
+  }
 
   @media (max-width: 800px){
     picture{

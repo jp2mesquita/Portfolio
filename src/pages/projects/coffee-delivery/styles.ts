@@ -9,7 +9,9 @@ export const Container = styled.div`
     font-size: 1.5rem;
     color: ${(props) => props.theme["yellow-dark"]};
   }
-
+  a{
+    transition: color .2s;
+  }
   a:hover{
     color: ${(props) => props.theme["yellow"]}
   }

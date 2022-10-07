@@ -10,6 +10,10 @@ export const Container = styled.div`
     color: ${(props) => props.theme["yellow-dark"]};
   }
 
+  a{
+
+    transition: color .2s;
+  }
   a:hover{
     color: ${(props) => props.theme["yellow"]}
   }
@@ -71,9 +75,7 @@ export const Brief = styled.div`
     text-align: justify;
     font-size: 1.25rem;
 
-    a{
-      transition: color .2s;
-    }
+
     a{
       color: ${(props) => props.theme["base-text"]};
       font-size: 1.25rem;

@@ -50,7 +50,7 @@ export default function AboutMe(){
       <Card isLarge={true}>
           <div>
             <h2>Sobre mim <span>🧔🏻</span></h2>
-            <p>Em 2013 eu ingressei na Universidade de Brasília no curso de Engenharia Mecâtrônica e foi ali, na matéria de Computação Básica, que digitei o meu primeiro &quot;Hello World&quot;. No entanto, a linguagem utilizada (C++) e o ambiente do curso não proporcionaram uma boa experiência o que me fez repensar meus planos e após 3 anos decidi mudar de rota </p>
+            <p>Em 2013 eu ingressei na Universidade de Brasília no curso de Engenharia Mecâtrônica e foi ali, na matéria de Computação Básica, que digitei o meu primeiro &quot;Hello World&quot;. No entanto, a linguagem utilizada (C++) e o ambiente do curso não proporcionaram uma boa experiência o que me fez repensar meus planos e após 3 anos decidi mudar de rota.  </p>
             <p>E foi assim que, resgatando outra paixão, a de ensinar, eu inciei o curso de Licenciatura em Matemática. E após me formar e experimentar as vivências de uma sala de aula acabei percebendo que eu não estava conseguindo causar o impacto que eu gostaria, e além disso você deve imaginar que o salário não era muito atrativo. Resultado... vamos mudar os planos novamente.</p>
             <p> 
               Tecnologia modernas e solucionar  problemas são duas paixões igualmente antigas na minha trajetória e poder alinhar isso com a oportunidade de dar vida a projetos reais, que podem impactar a vida de várias pessoas, foi o grande motor que me fez optar por conhecer e mergulhar de cabeça no mundo da programação.
