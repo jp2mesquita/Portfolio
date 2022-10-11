@@ -103,7 +103,7 @@ export const WebPicturesContainer = styled.div`
     width:100%;
     display: flex;
     align-items: center;
-    background-color: ${(props) => props.theme["base-card"]};
+    background-color: #69B99D;
     border-radius: 20px;
     flex-direction: column;
 

@@ -1,45 +1,35 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
-import { BannerContainer, Brief, Container, ExternalLinks, PageTitle } from "./styles";
+import { BannerContainer, Brief, Container, PageTitle } from "./styles";
 import Link from "next/link";
 
-import CoffeeDeliveryCover from '../../../assets/Captura de tela de 2022-10-01 12-48-13.png'
+import CoffeeDeliveryCover from '../../../assets/coffe-delivery/coffee-delivery-cover.png'
 import filterExample from '../../../assets/coffe-delivery/filter-example.png'
 import cartExample from '../../../assets/coffe-delivery/cart-example.png'
 
 import Image from "next/image";
 import Card from "../../../components/Card";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import ExternalLinks from "../../../components/ExternalLinks";
 
 
 
 
 
 export default function CoffeDelivery(){
+  const websiteLink = 'https://github.com/jp2mesquita/coffeDelivery-Rocketseat-Challenge'
+  const githubLink = 'https://github.com/jp2mesquita/coffeDelivery-Rocketseat-Challenge'
   return(
     <Container>
       <PageTitle>
         <h1>Coffee Delivery</h1>
       </PageTitle>
 
-      <ExternalLinks>
-        <Link 
-          href={'https://github.com/jp2mesquita/coffeDelivery-Rocketseat-Challenge'} 
-          target='_blank'
-        >
-          <FontAwesomeIcon icon={faAngleRight}/>  Visite o site
-        </Link>
-        <p>
-          <Link 
-            href={'https://github.com/jp2mesquita/coffeDelivery-Rocketseat-Challenge'}
-            target='_blank'
-          >
-            <FontAwesomeIcon icon={faGithub}/> github 
-          </Link>
-        </p>
+      <ExternalLinks websiteLink={websiteLink} githubLink={githubLink}/>
+     
         
-      </ExternalLinks>
+      
 
       <BannerContainer>
         <picture>
@@ -70,7 +60,7 @@ export default function CoffeDelivery(){
         <div>
           <section>
             <picture>
-              <Image src={filterExample} alt='' objectFit='contain'/>
+              <Image src={filterExample} alt='' objectFit='cover'/>
 
             </picture>
             <picture>

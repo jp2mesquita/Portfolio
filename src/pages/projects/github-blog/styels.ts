@@ -18,6 +18,7 @@ export const Container = styled.div`
 `
 
 
+
 export const PageTitle = styled.div`
   display: flex;
   justify-content: center;
@@ -27,10 +28,10 @@ export const PageTitle = styled.div`
   margin-bottom: 1.5rem;
 
   h1{
-    margin: 0;
-    font-size: clamp(0rem, 12vw, 12rem); 
-    white-space: nowrap;
-    line-height: 1;
+  margin: 0;
+  font-size: clamp(0rem, 16vw, 14rem); ;
+  white-space: nowrap;
+  line-height: 1;
   }
 `
 
@@ -41,11 +42,11 @@ export const BannerContainer = styled.div`
     
   picture{
     display: flex;
-    padding: 1rem 2rem 0rem 2rem;
+    /* padding: 1rem 2rem 0rem 2rem; */
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: #d6b231;
+    background-color: #104F8F;
     flex:1;
   }
  
@@ -65,6 +66,7 @@ export const Brief = styled.div`
 
     a{
       color: ${(props) => props.theme["base-text"]};
+      
       font-size: 1.25rem;
       text-decoration: underline;
     }
@@ -87,7 +89,7 @@ export const Brief = styled.div`
     width:100%;
     display: flex;
     align-items: center;
-    background-color: ${(props) => props.theme["yellow"]};
+    background-color:  #104F8F;
     border-radius: 20px;
     flex-direction: column;
 
@@ -110,12 +112,13 @@ export const Brief = styled.div`
         border-radius: 20px;
         width: 70%;
         overflow: hidden;
-        box-shadow: 0 0 40px rgba(0, 0, 0, .08)
+        
       }
 
       picture:last-child{
         position: absolute;
         transform: translateX(35%) translateY(60%);
+        
         overflow-Y:visible;
       }
     }
@@ -144,5 +147,18 @@ export const Brief = styled.div`
       }
   
     }
+  }
+`
+
+export const SkillsContainer = styled.section`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem;
+  grid-template-rows: min-content;
+  row-gap: 2rem;
+  span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `

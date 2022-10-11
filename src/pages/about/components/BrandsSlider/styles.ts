@@ -17,6 +17,7 @@ export const SliderContainer = styled.section`
 
       span{
         border-radius: 20px;
+        transition: background-color .8s;
       }
       span:hover{
         background-color: #e1e1e1;

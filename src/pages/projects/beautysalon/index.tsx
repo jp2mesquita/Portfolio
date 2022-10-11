@@ -75,7 +75,7 @@ export default function BeautySalon(){
       <Brief>
         <h2>O projeto</h2>
 
-        <p>Resultado de um evento promovido pela <Link href={rocketseatLink} target='_blank' color="#8047f8">Rocketseat</Link>, o NLW (Next Level Week), este projeto aprensa o meu primeiro trabalho completo como desenvolvedor.
+        <p>Resultado de um evento promovido pela <Link href={rocketseatLink} target='_blank' color="#8047f8">Rocketseat</Link>, o NLW (Next Level Week), este projeto apresenta o meu primeiro trabalho completo como desenvolvedor.
         Trata-se de uma landing page de apresentação de um salão de beleza. 
         </p>
 

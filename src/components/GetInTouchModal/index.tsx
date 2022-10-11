@@ -48,7 +48,8 @@ export function GetInTouchModal(){
               
             </button>
 
-            
+            <div>
+
             <ul>
               <li>
                 <FontAwesomeIcon icon={faLinkedin} size={'xl'}/>
@@ -64,6 +65,9 @@ export function GetInTouchModal(){
               </li>
 
             </ul>
+
+            <p>jp-mesquita@live.com</p>
+            </div>
           </div>
 
           </form>

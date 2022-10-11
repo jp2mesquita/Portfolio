@@ -3,10 +3,8 @@ import styled from "styled-components"
 export const HeaderContainer = styled.div`
   display: flex;
   justify-content: center;
-
   
-  
-`
+  `
 
 export const PageHeader = styled.header`
   display: flex;

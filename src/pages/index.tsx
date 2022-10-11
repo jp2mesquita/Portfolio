@@ -94,6 +94,27 @@ export default function Home() {
 
 
 
+    <Card>
+      <Link href={'/projects'}>
+        <picture>
+          <Image src={githubBlog} alt='' width={200} height={150}   objectFit='fill' />
+        </picture>
+
+        <CardFooter>
+          <div>
+            <h2>Github-Blog</h2>
+            <p>Conexão com api</p>
+          </div>
+
+          <div>
+            <FontAwesomeIcon 
+              icon={faArrowRightFromBracket} 
+              size={'2xl'}
+            />
+          </div>
+        </CardFooter>
+      </Link>
+    </Card>
 
 
     <Card >
@@ -120,27 +141,6 @@ export default function Home() {
     </Card>
 
 
-    <Card>
-      <Link href={'/projects'}>
-        <picture>
-          <Image src={githubBlog} alt='' width={200} height={150}   objectFit='fill' />
-        </picture>
-
-        <CardFooter>
-          <div>
-            <h2>Github-Blog</h2>
-            <p>Conexão com api</p>
-          </div>
-
-          <div>
-            <FontAwesomeIcon 
-              icon={faArrowRightFromBracket} 
-              size={'2xl'}
-            />
-          </div>
-        </CardFooter>
-      </Link>
-    </Card>
 
 
     <Card noPadTop={true} isMedium={true} isLarge={true}>

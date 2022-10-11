@@ -78,29 +78,31 @@ export default function Projects(){
         </Card>
 
         <Card >
-          <picture>
-            <Image src={igniteShopLogo} alt='' width={250} height={150} objectFit="fill"/>
-          </picture>
+          <Link href={'/projects/ignite-shop'}>
+            <picture>
+              <Image src={igniteShopLogo} alt='' width={250} height={150} objectFit="fill"/>
+            </picture>
 
-          <CardFooter>  
-            <div>
-              <h2>Ignite Shop</h2>
-              <p>Simulação de e-commerce</p>
-            </div>
+            <CardFooter>  
+              <div>
+                <h2>Ignite Shop</h2>
+                <p>Simulação de e-commerce</p>
+              </div>
 
-            <div>
-              <FontAwesomeIcon 
-                icon={faArrowRightFromBracket}
-                size={'2xl'}
-              />
-            </div>
-          </CardFooter>
+              <div>
+                <FontAwesomeIcon 
+                  icon={faArrowRightFromBracket}
+                  size={'2xl'}
+                  />
+              </div>
+            </CardFooter>
+          </Link>
         </Card>
 
 
 
         <Card>
-          <Link href={'/projects'}>
+          <Link href={'/projects/github-blog'}>
             <picture>
               <Image src={githubBlog} alt='' width={250} height={150}   objectFit='fill' />
             </picture>
@@ -144,7 +146,7 @@ export default function Projects(){
         </Card>
 
         <Card isMedium={true} isLarge={true}>
-          <Link href={'/projects'}>
+          <Link href={'/projects/ignite-lab-event-plataform'}>
             <picture>
               <Image src={eventPlataformLogo} alt='' width={250} height={150}   objectFit='fill' />
             </picture>
@@ -185,22 +187,23 @@ export default function Projects(){
         </Card>
 
         <Card isMedium={true} isLarge={true}>
+          <Link href={'/projects/dt-money'}>
+            <Image src={dtMoneyLogo} alt='' width={200} height={200} objectFit="fill"/>
 
-          <Image src={dtMoneyLogo} alt='' width={200} height={200} objectFit="fill"/>
+            <CardFooter>  
+              <div>
+                <h2>DT Money</h2>
+                <p>Administre suas finanças</p>
+              </div>
 
-          <CardFooter>  
-            <div>
-              <h2>DT Money</h2>
-              <p>Administre suas finanças</p>
-            </div>
-
-            <div>
-              <FontAwesomeIcon 
-                icon={faArrowRightFromBracket}
-                size={'2xl'}
-              />
-            </div>
-          </CardFooter>
+              <div>
+                <FontAwesomeIcon 
+                  icon={faArrowRightFromBracket}
+                  size={'2xl'}
+                  />
+              </div>
+            </CardFooter>
+          </Link>
         </Card>
 
       </GridContainer>    

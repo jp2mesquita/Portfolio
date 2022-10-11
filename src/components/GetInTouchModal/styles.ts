@@ -49,6 +49,7 @@ export const Content = styled(Dialog.Content)`
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-top: .5rem;
 
       ul{
         list-style: none;
@@ -63,11 +64,19 @@ export const Content = styled(Dialog.Content)`
           cursor: pointer;
         }
       }
+      div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* padding: 1rem; */
+        gap: 1rem;
+      }
     }
 
     button[type='submit'] {
       display: flex;
-      margin-top: 1rem;
+
       justify-content: center;
       align-items: center;
       width: 12rem;

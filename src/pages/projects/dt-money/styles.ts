@@ -28,9 +28,19 @@ export const PageTitle = styled.div`
 
   h1{
     margin: 0;
-    font-size: clamp(0rem, 12vw, 12rem); 
+    font-size: clamp(0rem, 18vw, 16rem); 
     white-space: nowrap;
     line-height: 1;
+  }
+`
+export const ExternalLinks = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  p{
+    a{
+      font-size: 1.25rem;
+    }
   }
 `
 
@@ -45,7 +55,7 @@ export const BannerContainer = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: #d6b231;
+    background-color: #00875F;
     flex:1;
   }
  
@@ -87,7 +97,7 @@ export const Brief = styled.div`
     width:100%;
     display: flex;
     align-items: center;
-    background-color: ${(props) => props.theme["yellow"]};
+    background-color: #00875F;
     border-radius: 20px;
     flex-direction: column;
 
@@ -115,7 +125,7 @@ export const Brief = styled.div`
 
       picture:last-child{
         position: absolute;
-        transform: translateX(35%) translateY(60%);
+        transform: translateX(35%) translateY(70%);
         overflow-Y:visible;
       }
     }
@@ -143,6 +153,25 @@ export const Brief = styled.div`
         }
       }
   
+      @media (max-width: 600px){
+       
+          padding: 1rem .2rem;
+        
+      }
     }
+
+  }
+`
+
+export const SkillsContainer = styled.section`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem;
+  grid-template-rows: min-content;
+  row-gap: 2rem;
+  span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `

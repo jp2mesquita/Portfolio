@@ -34,6 +34,7 @@ export const FooterContent = styled.div`
       -webkit-background-clip: text;
       color: transparent;
   }
+  
   nav{
 
     ul{
@@ -53,6 +54,27 @@ export const FooterContent = styled.div`
         color: ${(props) => props.theme["yellow-dark"]};
       }
     }
+  }
+
+  ul{
+    list-style: none;
+    display: flex;
+    
+    gap: 2rem;
+
+    li{
+      transition: color .2s;
+    }
+    li:hover{
+      color: ${(props)=> props.theme.yellow};
+      cursor: pointer;
+    }
+  }
+
+  ul~p{
+
+    margin-top: 2rem;
+ 
   }
 
   @media (max-width: 800px){
