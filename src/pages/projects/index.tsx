@@ -168,22 +168,23 @@ export default function Projects(){
         </Card>
 
         <Card isMedium={true} isLarge={true}>
+          <Link href={'/projects/nlw-esports'}>
+            <Image src={nlwLogo} alt='' width={200} height={200} objectFit="fill"/>
 
-          <Image src={nlwLogo} alt='' width={200} height={200} objectFit="fill"/>
+            <CardFooter>  
+              <div>
+                <h2>nlw eSports</h2>
+                <p>Encontre seu duo</p>
+              </div>
 
-          <CardFooter>  
-            <div>
-              <h2>nlw eSports</h2>
-              <p>Encontre seu duo</p>
+              <div>
+                <FontAwesomeIcon 
+                  icon={faArrowRightFromBracket}
+                  size={'2xl'}
+                  />
             </div>
-
-            <div>
-              <FontAwesomeIcon 
-                icon={faArrowRightFromBracket}
-                size={'2xl'}
-              />
-          </div>
-          </CardFooter>
+            </CardFooter>
+          </Link>
         </Card>
 
         <Card isMedium={true} isLarge={true}>

@@ -165,22 +165,23 @@ export default function Home() {
     </Card>
 
     <Card isLarge={true}>
-
+      <Link href={'/projects/nlw-esports'}>
         <Image src={nlwLogo} alt='' width={200} height={200} objectFit="fill"/>
 
-      <CardFooter>  
-        <div>
-          <h2>nlw eSports</h2>
-          <p>Encontre seu duo</p>
-        </div>
+        <CardFooter>  
+          <div>
+            <h2>nlw eSports</h2>
+            <p>Encontre seu duo</p>
+          </div>
 
-        <div>
-          <FontAwesomeIcon 
-            icon={faArrowRightFromBracket}
-            size={'2xl'}
-          />
-        </div>
-      </CardFooter>
+          <div>
+            <FontAwesomeIcon 
+              icon={faArrowRightFromBracket}
+              size={'2xl'}
+              />
+          </div>
+        </CardFooter>
+      </Link>
     </Card>
 
     <Card >

@@ -70,7 +70,7 @@ export default function Project(){
           <p>Foi durante a minha trajetória na universidade que tive os meus primeiros contatos com a programação. 
           </p>
           <p>Foi lá também onde colaborei e paticipei de várias feiras de ciências como a SNTC (Semana Nacional de Ciências e Tecnlogia) e os eventos da Semana Universitária, o que me fez ampliar ainda mais a minha visão sobre as possibilidades e vantagens do universo do desenvolvimento.</p>
-            
+          <br />
           <h3> <i>Rocketseat</i> <span>2022-2022</span></h3>
 
           <h4>Trilha Fundamentar Discover</h4>
