@@ -85,7 +85,7 @@ export default function GetInTouchModal(){
 return(
   <>
     <Dialog.Portal>
-      <Overlay />
+      <Overlay>
 
       <Content>
         <Dialog.Title> Entre em contato comigo</Dialog.Title>
@@ -161,6 +161,7 @@ return(
 
         </form>
       </Content>
+      </Overlay>
     </Dialog.Portal>
   </>
 

@@ -171,6 +171,8 @@ export const Content = styled(Dialog.Content)`
 
   @media (max-width: 800px){
     max-width: 80%;
+    max-height: 80vh;
+    overflow: auto;
   }
 
   @media (max-width: 650px){
