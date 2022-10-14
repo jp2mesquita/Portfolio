@@ -210,23 +210,25 @@ export default function Home() {
 
 
     <Card isMedium={true}>
-      <picture>
-        <Image src={igniteShopLogo} alt='' width={250} height={150} objectFit="fill"/>
-      </picture>
+      <Link href={'/projects/ignite-shop'}>
+        <picture>
+          <Image src={igniteShopLogo} alt='' width={250} height={150} objectFit="fill"/>
+        </picture>
 
-     <CardFooter>  
-        <div>
-          <h2>Ignite Shop</h2>
-          <p>Simulação de e-commerce</p>
-        </div>
+      <CardFooter>  
+          <div>
+            <h2>Ignite Shop</h2>
+            <p>Simulação de e-commerce</p>
+          </div>
 
-        <div>
-          <FontAwesomeIcon 
-            icon={faArrowRightFromBracket}
-            size={'2xl'}
-          />
-        </div>
-      </CardFooter>
+          <div>
+            <FontAwesomeIcon 
+              icon={faArrowRightFromBracket}
+              size={'2xl'}
+              />
+          </div>
+        </CardFooter>
+      </Link>
     </Card>
 
 

@@ -1,5 +1,6 @@
 import { FormEvent, useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
+import copy from 'copy-to-clipboard'
 
 import * as zod from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -14,26 +15,20 @@ import { faClose, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { CloseButton, Content, Overlay } from './styles'
+import { copyFile } from 'fs'
+import Link from 'next/link'
 
 
 const newContactFormValidationSchema = zod.object({
-  name: zod.string(),
-  email: zod.string(),
-  message: zod.string()
+  name: zod.string().min(1, {message: 'Preencha o seu nome aqui!'}),
+  email: zod.string().email({message: 'Email inválido, insira um email válido'}),
+  message: zod.string().min(1,{message: 'Deixe a sua mensagem aqui!'})
 })
 
 type NewContactFromImputs = zod.infer<typeof newContactFormValidationSchema>
 
-// interface ContactProps extends NewContactFromImputs{
-//   event: FormEvent
-// }
 
 export function GetInTouchModal(){
-  // const [name, setName] = useState('')
-  // const [email, setEmail] = useState('')
-  // const [message, setMessage] = useState('')
-  
-
   const newContactForm =useForm<NewContactFromImputs>({
     resolver: zodResolver(newContactFormValidationSchema),
     defaultValues:{
@@ -52,25 +47,19 @@ export function GetInTouchModal(){
     reset,
   } = newContactForm
 
+  const templateParams ={
+    from_name: watch('name'),
+    message: watch('message'),
+    email: watch('email'),
+    reply_to: watch('email')
+  }
 
+  const isAllFilled = !(templateParams.from_name === '' || templateParams.message === '' || templateParams.email === '' )
+  const isSubmitDisable = !isAllFilled
+  
   async function handleSubmitNewContactForm( data: NewContactFromImputs) {
     // event.preventDefault();
-    
-    const templateParams ={
-      from_name: watch('name'),
-      message: watch('message'),
-      email: watch('email'),
-      reply_to: watch('email')
-    }
-
-    
-    // if(name ==='' || email === '' || message === ''){
-    //   alert("Preencha todos os campos")
-    //   return
-    // }
-
-    
-    
+      
     const emailjs_service_id = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
     const emailjs_template_id = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
     const emailjs_api_key = process.env.NEXT_PUBLIC_EMAILJS_API_PUBLIC_KEY
@@ -80,9 +69,6 @@ export function GetInTouchModal(){
     emailjs.send(emailjs_service_id, emailjs_template_id, templateParams, emailjs_api_key)
     .then((res) => {
       console.log('Email sent', res.status, res.text)
-      // setName('')
-      // setEmail('')
-      // setMessage('')
     })
     .catch((error) => {
       console.error("ERRO: ", error)
@@ -90,81 +76,93 @@ export function GetInTouchModal(){
 
     reset()
   }
-  return(
-    <>
-      <Dialog.Portal>
-        <Overlay />
 
-        <Content>
-          <Dialog.Title> Entre em contato comigo</Dialog.Title>
+  function handleCopyTextToClipboard(){
+    const myEmail = 'jp-mesquita@live.com'
+    copy(myEmail)
+    document.getElementById('copyToClipboard').innerHTML='Copiado!'
+  }
+return(
+  <>
+    <Dialog.Portal>
+      <Overlay />
 
-          <CloseButton>
-            <FontAwesomeIcon icon={faClose} size={'2x'}/>
-          </CloseButton>
+      <Content>
+        <Dialog.Title> Entre em contato comigo</Dialog.Title>
 
-          <form onSubmit={handleSubmit(handleSubmitNewContactForm)}>
-            <input 
-              type={'text'} 
-              placeholder={'Digite o seu nome'}
-              // id='name'
-              required
-              {...register('name')}
-              // value={name}
-              // onChange={({target}) => setName(target.value)}
-            />
-            <input 
-              type={'email'} 
-              placeholder={'Digite o seu e-mail'}
-              // id='email'
-              required
-              {...register('email')}
-              // value={email}
-              // onChange={({target}) => setEmail(target.value)}
-            />
-            <textarea 
-              
-              placeholder={'Deixe sua mensagem...'}
-              // id='message'
-              rows={20}
-              required
-              {...register('message')}
-              // value={message}
-              // onChange={({target}) => setMessage(target.value)}
-            />
+        <CloseButton>
+          <FontAwesomeIcon icon={faClose} size={'2x'}/>
+        </CloseButton>
+
+        <form onSubmit={handleSubmit(handleSubmitNewContactForm)}>
+          <input 
+            type={'text'} 
+            placeholder={'Digite o seu nome'}
+            required
+            {...register('name')}
+          />
+          <input 
+            type={'email'} 
+            placeholder={'Digite o seu e-mail'}
+            required
+            {...register('email')}
+          />
+          <textarea
+            placeholder={'Deixe sua mensagem...'}
+            rows={20}
+            required
+            {...register('message')}
+          />
+
+        <div>
+          <button type="submit" disabled={isSubmitDisable}>
+            Enviar
+            <FontAwesomeIcon icon={faPaperPlane}/>
+            <span className='sumbitNotAlowed'>Preencha todos os campos</span>
+          </button>
 
           <div>
-            <button type="submit" disabled={isSubmitting}>
-              Enviar
-              <FontAwesomeIcon icon={faPaperPlane}/>
-              
-            </button>
-
-            <div>
 
             <ul>
               <li>
-                <FontAwesomeIcon icon={faLinkedin} size={'xl'}/>
+                <Link href={'https://linkedin.com/in/jp2mesquita'} target='_blank'>
+                  <FontAwesomeIcon icon={faLinkedin} size={'xl'}/>
+                </Link>
               </li>
               <li>
-                <FontAwesomeIcon icon={faGithub} size={'xl'}/>
+                <Link href={'https://github.com/jp2mesquita'} target='_blank'>
+                  <FontAwesomeIcon icon={faGithub} size={'xl'}/>
+                </Link>
               </li>
               <li>
-                <FontAwesomeIcon icon={faInstagram} size={'xl'}/>
+                <Link href={''} target='_blank'>
+                  <FontAwesomeIcon icon={faInstagram} size={'xl'}/>
+                </Link>
               </li>
               <li>
-                <FontAwesomeIcon icon={faTwitter} size={'xl'}/>
+                <Link href={''} target='_blank'>
+                  <FontAwesomeIcon icon={faTwitter} size={'xl'}/>
+                </Link>
               </li>
 
             </ul>
 
-            <p>jp-mesquita@live.com</p>
-            </div>
+            <p onClick={handleCopyTextToClipboard}>
+              jp-mesquita@live.com
+              <span 
+                id='copyToClipboard' 
+                className='copyToClipboard'
+              >
+                Copiar para área de transferência
+              </span>
+            </p>
           </div>
+        </div>
 
-          </form>
-        </Content>
-      </Dialog.Portal>
-    </>
+        </form>
+      </Content>
+    </Dialog.Portal>
+  </>
 
-  )
+)
 }

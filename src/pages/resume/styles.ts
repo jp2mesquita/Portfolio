@@ -21,6 +21,9 @@ export const ResumeContainer = styled.div`
   margin-top: 2rem;
   gap: 3rem;
     
+  @media (max-width: 1180px){
+    flex-direction: column;
+  }
 `
 export const CardWrapper = styled.section`
   display: flex; 
@@ -29,15 +32,22 @@ export const CardWrapper = styled.section`
   
   gap: 2rem;
 
+  @media (max-width: 1180px){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
 
-
+  @media (max-width: 800px){
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 `
 export const LinksWrapper = styled.div`
   display: flex;
   
   flex-direction: column;
   flex-flow: column;
-  /* gap: 1rem; */
   
   a{
     padding-block: 1rem;
@@ -74,6 +84,11 @@ export const LinksWrapper = styled.div`
     }
   }
  
+  @media (max-width: 800px){
+    h3{
+      font-size: 1.25rem;
+    }
+  }
   
 `
 
@@ -93,8 +108,7 @@ export const TextWrapper = styled.section`
   h3{
     font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin-block: 1rem;
     text-decoration: underline;
     span{
       font-weight: bold;
@@ -115,6 +129,26 @@ export const TextWrapper = styled.section`
     span{
       font-weight: bold;
     
+    }
+  }
+
+  @media (max-width: 800px){
+    h2{
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+
+    }
+    h3, h4, p{
+      font-size: 1rem;
+    }
+
+    h3{
+    margin-block: .5rem;
+
+    }
+    h4{
+      margin-top: .5rem;
+
     }
   }
   
@@ -139,5 +173,17 @@ export const SkillsContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  @media (max-width: 800px){
+    span{
+      width: 5rem;
+    }
+  }
+
+  @media (max-width: 500px){
+    span{
+      width: 4rem;
+    }
   }
 `

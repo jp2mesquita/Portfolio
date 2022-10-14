@@ -3,25 +3,30 @@ import styled from "styled-components"
 export const HeaderContainer = styled.div`
   display: flex;
   justify-content: center;
-  
-  `
+  header{
+    height: 6rem;
+    transition: height .5s;
+    overflow: hidden;
+  }
+
+  header.active{
+    height: 26rem;
+  }
+`
 
 export const PageHeader = styled.header`
   display: flex;
   width: 100%;
   padding: 2rem;
   max-width: 1416px;
-
   
   align-items: center;
   justify-content: space-between;
-  height: 6rem;
   position: fixed;
   top: 0;
   background-color: ${(props) => props.theme["background"]};
   z-index: 1;
  
-
   
   h1{
       background: linear-gradient(90deg, rgba(232,116,96,1) 7%, rgba(205,193,65,1) 23%, rgba(240,146,130,1) 52%, rgba(191,211,124,1) 76%, rgba(95,204,211,1) 94%);
@@ -84,16 +89,120 @@ export const PageHeader = styled.header`
   }
 
   @media (max-width: 800px){
-    h1{
-      font-size: 1.5rem;
+    flex-direction: column;
+    background-color: ${(props) => props.theme.background};
+
+    gap: 3rem;
+
+    div{
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      h1{
+        font-size: 1.5rem;
+      }
     }
-    ul{
-      display: none;
+
+    nav{
+      visibility:hidden;
+      opacity: 0;
+      
+      ul{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+     
+    }
+    
+    nav.active{
+      display: flex;
+      visibility: visible;
+      opacity: 1;
     }
 
     button{
-      display: none;
+      visibility:hidden;
+      opacity: 0;
+    }    
+
+    button.active{
+      display: flex;
+      visibility: visible;
+      opacity: 1;
     }
   }
 
+`
+
+export const HamburguerMenu = styled.section`
+  display: none;
+  height: 2rem;
+  cursor: pointer;
+
+  @media (max-width: 800px){
+    display: flex;
+    opacity: .8;
+    width: 24px;
+    section{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      flex: 1;
+      div{
+        position: relative;
+        width: 24px;
+        height: 3px;
+        border-radius: 15px;
+        background-color: ${(props) => props.theme["base-text"]};
+        
+        transition: .5s;
+      }
+      
+      div.active{
+        width: 1px;
+        background-color: transparent;
+      }
+      
+      div::before{
+        content: '';
+        width: 24px;
+        height: 3px;
+        border-radius: 15px;
+
+        background-color: ${(props) => props.theme["base-text"]};
+        position: absolute;
+        top: -.3rem;
+
+        transition: .5s;
+      }
+      
+      div.active::before{
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      div::after{
+        content: '';
+        width: 24px;
+        height: 3px;
+        border-radius: 15px;
+
+        background-color: ${(props) => props.theme["base-text"]};
+        position: absolute;
+        top: .3rem;
+
+        transition: .5s;
+      }
+
+      div.active::after{
+        top: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
 `

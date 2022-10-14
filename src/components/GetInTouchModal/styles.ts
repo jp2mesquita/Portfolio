@@ -11,7 +11,8 @@ export const Overlay = styled(Dialog.Overlay)`
 `
 
 export const Content = styled(Dialog.Content)`
-  min-width: 52rem;
+  width: 100%;
+  max-width: 52rem;
   border-radius: 6px;
   padding: 2.5rem 3rem;
   background-color: ${(props)=> props.theme["background"]};
@@ -71,11 +72,43 @@ export const Content = styled(Dialog.Content)`
         justify-content: center;
         /* padding: 1rem; */
         gap: 1rem;
+
+        p{
+          position: relative;
+          .copyToClipboard{
+            position: absolute;
+
+            width: 100%;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 2;
+            left: -100%;
+
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .4s;
+            font-size: .8rem;
+          }
+        }
+
+        p:hover{
+          cursor: pointer;
+          .copyToClipboard{
+            visibility: visible;
+            opacity: .6;
+            }
+
+        }
       }
     }
 
     button[type='submit'] {
       display: flex;
+      position: relative;
 
       justify-content: center;
       align-items: center;
@@ -93,12 +126,71 @@ export const Content = styled(Dialog.Content)`
 
       transition: background .2s;
 
-      &:hover{
+      &:not(:disabled):hover{
         background: ${(props) => props.theme['yellow-dark']};
 
       }
+      .sumbitNotAlowed{
+        position: absolute;
+        z-index: 3;
+
+        width: 100%;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 2;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -60px;
+
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .4s;
+        font-size: 1rem;
+      }
+      &:disabled{
+        opacity: .5;
+        cursor: not-allowed;
+        &:hover{
+          .sumbitNotAlowed{
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
     }
- 
+  
+  }
+
+  @media (max-width: 1180px){
+    max-width: 42rem;
+  }
+
+  @media (max-width: 800px){
+    max-width: 80%;
+  }
+
+  @media (max-width: 650px){
+    form{
+      div{
+        flex-direction: column;
+        width: 100%;
+        gap:1rem;
+
+        button[type='submit']{
+          width: 100%;
+          font-size: 1rem;
+        }
+      }
+      ul{
+        svg{
+          font-size: 1.5rem;
+        }
+      }
+    }
   }
 `
 

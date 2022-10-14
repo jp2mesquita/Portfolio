@@ -146,3 +146,16 @@ export const Brief = styled.div`
     }
   }
 `
+
+export const SkillsContainer = styled.section`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem;
+  grid-template-rows: min-content;
+  row-gap: 2rem;
+  span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+`

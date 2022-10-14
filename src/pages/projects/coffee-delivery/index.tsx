@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
-import { BannerContainer, Brief, Container, PageTitle } from "./styles";
+import { BannerContainer, Brief, Container, PageTitle, SkillsContainer } from "./styles";
 import Link from "next/link";
 
 import CoffeeDeliveryCover from '../../../assets/coffe-delivery/coffee-delivery-cover.png'
@@ -14,7 +14,10 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import ExternalLinks from "../../../components/ExternalLinks";
 
 
-
+import viteLogo from '../../../assets/tools/vite-logo.png'
+import reactLogoVertical from '../../../assets/tools/react-logo-vertical.png'
+import styledComponentsLogo from '../../../assets/tools/logo-dark-text.png'
+import typescriptLogo from '../../../assets/tools/typescript-logo.png'
 
 
 export default function CoffeDelivery(){
@@ -79,6 +82,24 @@ export default function CoffeDelivery(){
         <p>
           Para a criação deste projeto em React.js eu utilizei o <Link href={'https://vitejs.dev/'} target='_blank'>Vite</Link> juntamente com <Link href={'https://www.typescriptlang.org/'} target='_blank'>Typescript</Link>.
         </p>
+
+        <SkillsContainer>
+
+          <span>
+            <Image src={viteLogo} alt='' width={200} height={120} objectFit='contain'/>
+          </span>
+          <span>
+            <Image src={reactLogoVertical} alt='' width={130} height={120} objectFit='contain'/>
+          </span>
+
+          <span>
+            <Image src={styledComponentsLogo} alt='' width={100} height={100} objectFit='contain'/>
+          </span>
+
+          <span>
+            <Image src={typescriptLogo} alt=''  width={200} height={120} objectFit='contain'/>
+          </span>
+        </SkillsContainer>
 
         <p>O Layout utilizado, criado pela  pode ser encontrado <Link href={'https://www.figma.com/file/5yT9ZzZmRQRS4yivGGB3pl/Coffee-Delivery'} target='_blank'>aqui.</Link></p>
 
