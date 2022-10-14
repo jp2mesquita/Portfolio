@@ -11,7 +11,7 @@ import stitchesLogo from '../../../../assets/tools/hero.webp'
 import typescriptLogo from '../../../../assets/tools/typescript-logo.png'
 import nodeLogo from '../../../../assets/tools/node-logo.png'
 
-export function BrandsSlider(){
+export default function BrandsSlider(){
   return(
     <>
         <SliderContainer>

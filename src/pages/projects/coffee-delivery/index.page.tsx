@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
-import { BannerContainer, Brief, Container, PageTitle, SkillsContainer } from "./styles";
+import  { BannerContainer, Brief, Container, PageTitle, SkillsContainer } from "./styles";
 import Link from "next/link";
 
 import CoffeeDeliveryCover from '../../../assets/coffe-delivery/coffee-delivery-cover.png'

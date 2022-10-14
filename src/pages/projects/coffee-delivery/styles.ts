@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const Container = styled.div`
   display: flex;
@@ -17,7 +17,6 @@ export const Container = styled.div`
   }
 `
 
-
 export const PageTitle = styled.div`
   display: flex;
   justify-content: center;
@@ -33,6 +32,8 @@ export const PageTitle = styled.div`
     line-height: 1;
   }
 `
+
+
 
 export const BannerContainer = styled.div`
   display: flex;

@@ -5,8 +5,8 @@ import { Container } from "../styles/Pages/app"
 import { lightTheme } from "../styles/themes/ligth"
 
 
-import { Header } from "../components/Header"
-import { Footer } from "../components/Footer"
+import Header  from "../components/Header"
+import  Footer  from "../components/Footer"
 
 
 function MyApp({ Component, pageProps }) {

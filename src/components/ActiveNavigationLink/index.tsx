@@ -7,7 +7,7 @@ interface ActiveNavigationLinkProps extends LinkProps{
   activeClassName: string
 }
 
-export function ActiveNavigationLink( { children, activeClassName, ...rest}: ActiveNavigationLinkProps){
+export default function ActiveNavigationLink( { children, activeClassName, ...rest}: ActiveNavigationLinkProps){
 
   const { asPath } = useRouter()
 

@@ -2,11 +2,11 @@ import Link from "next/link";
 import { HamburguerMenu, HeaderContainer, PageHeader } from "./styles";
 
 import * as Dialog from '@radix-ui/react-dialog'
-import { GetInTouchModal } from "../GetInTouchModal"
-import { ActiveNavigationLink } from "../ActiveNavigationLink";
+import  GetInTouchModal  from "../GetInTouchModal"
+import  ActiveNavigationLink  from "../ActiveNavigationLink";
 import { useState } from "react";
 
-export function Header(){
+export default function Header(){
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 

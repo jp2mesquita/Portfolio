@@ -28,7 +28,7 @@ const newContactFormValidationSchema = zod.object({
 type NewContactFromImputs = zod.infer<typeof newContactFormValidationSchema>
 
 
-export function GetInTouchModal(){
+export default function GetInTouchModal(){
   const newContactForm =useForm<NewContactFromImputs>({
     resolver: zodResolver(newContactFormValidationSchema),
     defaultValues:{

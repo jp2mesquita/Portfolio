@@ -10,7 +10,7 @@ import { Container, GridContainer, PageTitle } from "./styles";
 
 import { faGraduationCap} from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { BrandsSlider } from "./components/BrandsSlider";
+import  BrandsSlider  from "./components/BrandsSlider/index.page";
 
 
 export default function AboutMe(){

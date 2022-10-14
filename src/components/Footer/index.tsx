@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { FooterContainer, FooterContent } from "./styles";
 
-export function Footer(){
+export default function Footer(){
   return(
     <FooterContainer>
             <FooterContent>
