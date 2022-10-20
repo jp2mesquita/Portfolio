@@ -11,7 +11,6 @@ export default function Header(){
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   function handleToggleNavMenu(){
-    const newValue = !isMenuOpen
     setIsMenuOpen(!isMenuOpen)
   }
 
