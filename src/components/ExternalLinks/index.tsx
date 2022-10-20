@@ -12,11 +12,17 @@ interface ExternalLinksProps{
 }
 
 export default function ExternalLinks({ websiteLink, githubLink }: ExternalLinksProps){
+  function checkTheSiteLink(){
+    if (websiteLink==='#'){
+      alert('Desculpe, este site ainda não está disponível! Volte em alguns dias.')
+    }
+  }
   return(
     <Container>
         <Link 
+          onClick={checkTheSiteLink}
           href={websiteLink} 
-          target='_blank'
+          target={websiteLink==='#' ? '_self' : '_blank'}
         >
           <FontAwesomeIcon icon={faAngleRight}/>  Visite o site
         </Link>
