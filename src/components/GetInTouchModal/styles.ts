@@ -172,10 +172,12 @@ export const Content = styled(Dialog.Content)`
   @media (max-width: 800px){
     max-width: 80%;
     max-height: 80vh;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   @media (max-width: 650px){
+    padding-inline: 1.5rem;
     form{
       div{
         flex-direction: column;
