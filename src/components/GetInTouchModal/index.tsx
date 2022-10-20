@@ -1,5 +1,5 @@
-import { FormEvent, useState } from 'react'
-import { Controller, useForm } from 'react-hook-form'
+
+import { useForm } from 'react-hook-form'
 import copy from 'copy-to-clipboard'
 
 import * as zod from 'zod'
@@ -15,8 +15,10 @@ import { faClose, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { CloseButton, Content, Overlay } from './styles'
-import { copyFile } from 'fs'
+
 import Link from 'next/link'
+import MessageSent from './components/MessageSent'
+import { useState } from 'react'
 
 
 const newContactFormValidationSchema = zod.object({
@@ -29,6 +31,10 @@ type NewContactFromImputs = zod.infer<typeof newContactFormValidationSchema>
 
 
 export default function GetInTouchModal(){
+
+  const [isMenssageSent, setIsMessageSent] = useState(false)
+
+
   const newContactForm =useForm<NewContactFromImputs>({
     resolver: zodResolver(newContactFormValidationSchema),
     defaultValues:{
@@ -39,7 +45,6 @@ export default function GetInTouchModal(){
   })
 
   const {
-    control,
     register,
     handleSubmit,
     formState: { isSubmitting },
@@ -74,7 +79,11 @@ export default function GetInTouchModal(){
       console.error("ERRO: ", error)
     })
 
+    setIsMessageSent(true)
+
     reset()
+
+
   }
 
   function handleCopyTextToClipboard(){
@@ -82,84 +91,111 @@ export default function GetInTouchModal(){
     copy(myEmail)
     document.getElementById('copyToClipboard').innerHTML='Copiado!'
   }
+
+  function handleNewMessage(){
+    setIsMessageSent(false)
+    
+  }
+
+  
+
+
 return(
   <>
     <Dialog.Portal>
       <Overlay>
 
       <Content>
-        <Dialog.Title> Entre em contato comigo</Dialog.Title>
 
-        <CloseButton>
-          <FontAwesomeIcon icon={faClose} size={'2x'}/>
-        </CloseButton>
+        {isMenssageSent
+          ? <MessageSent handleNewMessage={handleNewMessage} />
+          : <>
+              <Dialog.Title> Entre em contato comigo</Dialog.Title>
 
-        <form onSubmit={handleSubmit(handleSubmitNewContactForm)}>
-          <input 
-            type={'text'} 
-            placeholder={'Digite o seu nome'}
-            required
-            {...register('name')}
-          />
-          <input 
-            type={'email'} 
-            placeholder={'Digite o seu e-mail'}
-            required
-            {...register('email')}
-          />
-          <textarea
-            placeholder={'Deixe sua mensagem...'}
-            rows={20}
-            required
-            {...register('message')}
-          />
+              <CloseButton>
+                <FontAwesomeIcon icon={faClose} size={'2x'}/>
+              </CloseButton>
+      
+              <form onSubmit={handleSubmit(handleSubmitNewContactForm)}>
+                <input 
+                  type={'text'} 
+                  placeholder={'Digite o seu nome'}
+                  required
+                  {...register('name')}
+                />
+                <input 
+                  type={'email'} 
+                  placeholder={'Digite o seu e-mail'}
+                  required
+                  {...register('email')}
+                />
+                <textarea
+                  placeholder={'Deixe sua mensagem...'}
+                  rows={20}
+                  required
+                  {...register('message')}
+                />
+      
+              <div>
+                
 
-        <div>
-          <button type="submit" disabled={isSubmitDisable}>
-            Enviar
-            <FontAwesomeIcon icon={faPaperPlane}/>
-            <span className='sumbitNotAlowed'>Preencha todos os campos</span>
-          </button>
+                <button 
+                  type="submit" 
+                  disabled={false} 
+                >
+                  Enviar
+                  <FontAwesomeIcon icon={faPaperPlane}/>
+                  <span className='sumbitNotAlowed'>Preencha todos os campos</span>
+                </button>
 
-          <div>
+      
+                <div>
+      
+                  <ul>
+                    <li>
+                      <Link href={'https://linkedin.com/in/jp2mesquita'} target='_blank'>
+                        <FontAwesomeIcon icon={faLinkedin} size={'xl'}/>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={'https://github.com/jp2mesquita'} target='_blank'>
+                        <FontAwesomeIcon icon={faGithub} size={'xl'}/>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={'https://instagram.com/joaopaulomesquita'} target='_blank'>
+                        <FontAwesomeIcon icon={faInstagram} size={'xl'}/>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={'https://twitter.com/jpmesquita_ump'} target='_blank'>
+                        <FontAwesomeIcon icon={faTwitter} size={'xl'}/>
+                      </Link>
+                    </li>
+      
+                  </ul>
+      
+                  <p onClick={handleCopyTextToClipboard}>
+                    jp-mesquita@live.com
+                    <span 
+                      id='copyToClipboard' 
+                      className='copyToClipboard'
+                    >
+                      Copiar para área de transferência
+                    </span>
+                  </p>
+                </div>
+              </div>
+      
+              </form>
+            </>
+      }
+        
+        
 
-            <ul>
-              <li>
-                <Link href={'https://linkedin.com/in/jp2mesquita'} target='_blank'>
-                  <FontAwesomeIcon icon={faLinkedin} size={'xl'}/>
-                </Link>
-              </li>
-              <li>
-                <Link href={'https://github.com/jp2mesquita'} target='_blank'>
-                  <FontAwesomeIcon icon={faGithub} size={'xl'}/>
-                </Link>
-              </li>
-              <li>
-                <Link href={'https://instagram.com/joaopaulomesquita'} target='_blank'>
-                  <FontAwesomeIcon icon={faInstagram} size={'xl'}/>
-                </Link>
-              </li>
-              <li>
-                <Link href={'https://twitter.com/jpmesquita_ump'} target='_blank'>
-                  <FontAwesomeIcon icon={faTwitter} size={'xl'}/>
-                </Link>
-              </li>
+        
 
-            </ul>
 
-            <p onClick={handleCopyTextToClipboard}>
-              jp-mesquita@live.com
-              <span 
-                id='copyToClipboard' 
-                className='copyToClipboard'
-              >
-                Copiar para área de transferência
-              </span>
-            </p>
-          </div>
-        </div>
-
-        </form>
       </Content>
       </Overlay>
     </Dialog.Portal>

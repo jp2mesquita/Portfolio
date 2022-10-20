@@ -20,6 +20,11 @@ export const Content = styled(Dialog.Content)`
   position: fixed;
   z-index: 2;
 
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
