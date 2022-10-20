@@ -38,7 +38,7 @@ export default function Footer(){
               
               <ul>
               <li>
-                <Link href={'https://www.linkedin.com/in/jo%C3%A3o-paulo-mesquita-02a4a3179/'} target="_blank">
+                <Link href={'https://www.linkedin.com/in/jp2mesquita/'} target="_blank">
                   <FontAwesomeIcon icon={faLinkedin} size={'2x'}/>
                 </Link>
               </li>

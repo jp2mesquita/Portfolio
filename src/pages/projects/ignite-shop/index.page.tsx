@@ -21,7 +21,7 @@ import typescriptLogo from '../../../assets/tools/typescript-logo.png'
 
 export default function IgniteShop(){
 
-  const websiteLink = "https://github.com/jp2mesquita/Ignite_shop2_Next.js"
+  const websiteLink = "https://ignite-shop2-jp2mesquita.vercel.app/"
   const gihubLink = "https://github.com/jp2mesquita/Ignite_shop2_Next.js"
   const rocketseatLink = "https://www.rocketseat.com.br/"
   const stripeLink = "https://stripe.com/br"

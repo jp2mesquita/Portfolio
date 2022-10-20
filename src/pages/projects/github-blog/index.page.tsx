@@ -15,7 +15,7 @@ import ExternalLinks from "../../../components/ExternalLinks";
 
 export default function githubBlog(){
 
-  const websiteLink = 'https://github.com/jp2mesquita/github_blog_2'
+  const websiteLink = '#'
   const githubLink = 'https://github.com/jp2mesquita/github_blog_2'
   return(
     <Container>

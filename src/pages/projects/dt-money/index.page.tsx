@@ -14,7 +14,7 @@ import Link from "next/link";
 
 export default function DTMoney(){
 
-  const websiteLink = 'https://github.com/jp2mesquita/Ignite-DTmoney_jp2mesquita'
+  const websiteLink = '#'
   const githubLink = 'https://github.com/jp2mesquita/Ignite-DTmoney_jp2mesquita'
   const figmaLink = 'https://www.figma.com/file/G5lTYaaweKE5AdCZfn5pyM/DT-Money'
 
@@ -24,7 +24,7 @@ export default function DTMoney(){
         <h1>DT-Money</h1>
       </PageTitle>
 
-      <ExternalLinks githubLink={websiteLink} websiteLink={githubLink}/>
+      <ExternalLinks githubLink={githubLink} websiteLink={websiteLink}/>
       <BannerContainer>
         <picture>
           <Image 

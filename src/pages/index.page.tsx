@@ -69,7 +69,7 @@ export default function Home() {
 
 
       <Card >
-        <Link href={'https://www.linkedin.com/in/jo%C3%A3o-paulo-mesquita-02a4a3179/'} target='_blank'>
+        <Link href={'https://www.linkedin.com/in/jp2mesquita/'} target='_blank'>
           <div>
             <FontAwesomeIcon 
               icon={faLinkedin} 
@@ -95,7 +95,7 @@ export default function Home() {
 
 
     <Card>
-      <Link href={'/projects'}>
+      <Link href={'/projects/github-blog'}>
         <picture>
           <Image src={githubBlog} alt='' width={200} height={150}   objectFit='fill' />
         </picture>

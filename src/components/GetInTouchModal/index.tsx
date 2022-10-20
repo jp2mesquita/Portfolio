@@ -135,12 +135,12 @@ return(
                 </Link>
               </li>
               <li>
-                <Link href={''} target='_blank'>
+                <Link href={'https://instagram.com/joaopaulomesquita'} target='_blank'>
                   <FontAwesomeIcon icon={faInstagram} size={'xl'}/>
                 </Link>
               </li>
               <li>
-                <Link href={''} target='_blank'>
+                <Link href={'https://twitter.com/jpmesquita_ump'} target='_blank'>
                   <FontAwesomeIcon icon={faTwitter} size={'xl'}/>
                 </Link>
               </li>

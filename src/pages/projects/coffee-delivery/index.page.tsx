@@ -21,7 +21,7 @@ import typescriptLogo from '../../../assets/tools/typescript-logo.png'
 
 
 export default function CoffeDelivery(){
-  const websiteLink = 'https://github.com/jp2mesquita/coffeDelivery-Rocketseat-Challenge'
+  const websiteLink = 'https://coffee-delivery-jp2mesquita.vercel.app/'
   const githubLink = 'https://github.com/jp2mesquita/coffeDelivery-Rocketseat-Challenge'
   return(
     <Container>

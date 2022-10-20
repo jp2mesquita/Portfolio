@@ -42,7 +42,7 @@ export default function Project(){
           <Card>
             <div></div>
             <LinksWrapper>
-              <Link href={'https://www.linkedin.com/in/jo%C3%A3o-paulo-mesquita-02a4a3179/'} target='_blank' >
+              <Link href={'https://www.linkedin.com/in/jp2mesquita/'} target='_blank' >
                 <h3>Linkedin <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></h3>
                 
               </Link>
