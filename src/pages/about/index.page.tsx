@@ -50,17 +50,17 @@ export default function AboutMe(){
       <Card isLarge={true}>
           <div>
             <h2>Sobre mim <span>🧔🏻</span></h2>
-            <p>Em 2013 eu ingressei na Universidade de Brasília no curso de Engenharia Mecâtrônica e foi ali, na matéria de Computação Básica, que digitei o meu primeiro &quot;Hello World&quot;. No entanto, a linguagem utilizada (C++) e o ambiente do curso não proporcionaram uma boa experiência o que me fez repensar meus planos e após 3 anos decidi mudar de rota.  </p>
-            <p>E foi assim que, resgatando outra paixão, a de ensinar, eu inciei o curso de Licenciatura em Matemática. E após me formar e experimentar as vivências de uma sala de aula acabei percebendo que eu não estava conseguindo causar o impacto que eu gostaria, e além disso você deve imaginar que o salário não era muito atrativo. Resultado... vamos mudar os planos novamente.</p>
+            <p>Em 2013 eu ingressei na Universidade de Brasília no curso de Engenharia Mecâtrônica e foi ali, na matéria de Computação Básica, que digitei o meu primeiro &quot;Hello World&quot;. No entanto, a linguagem utilizada (C++) e o ambiente do curso não proporcionaram uma boa experiência o que me fez não ter interesse em continuar aprendendo programação. O tempo foi passando e após longos 3 anos eu repensei meus planos e decidi mudar de rota.  </p>
+            <p>E foi assim que, resgatando outra paixão, a de ensinar, eu iniciei o curso de Licenciatura em Matemática. Até ai tudo ótimo, eu estava resolvendo problemas e sonhando em mudar a vida de pessoas através da educação. E então, logo após me formar e experimentar as vivências de uma sala de aula acabei percebendo que eu não estava conseguindo causar o impacto que eu gostaria, e além disso você deve imaginar que o salário não era muito atrativo. Resultado... vamos mudar os planos novamente.</p>
             <p> 
-              Tecnologia modernas e solucionar  problemas são duas paixões igualmente antigas na minha trajetória e poder alinhar isso com a oportunidade de dar vida a projetos reais, que podem impactar a vida de várias pessoas, foi o grande motor que me fez optar por conhecer e mergulhar de cabeça no mundo da programação.
+              Tecnologias modernas e solucionar  problemas são duas paixões igualmente antigas na minha trajetória e poder alinhar isso com a oportunidade de dar vida a projetos reais, que podem impactar a vida de várias pessoas, foi o grande motor que me fez optar por conhecer e mergulhar de cabeça no mundo da programação.
               
             </p>
             <p>
-              Eu credito que a educação, alinhada a uma boa dose de esforço e dedicação, é o melhor caminho pra qualquer tipo de sucesso. 
+              Eu acredito que a educação, alinhada a uma boa dose de esforço e dedicação, é o melhor caminho pra qualquer tipo de sucesso. 
             </p>
             <p>
-              Sou desenvolvedor focado em front-end e busco aprender constantemente sobre desenvolvimento de sistemas web sempre focando em tecnologias modernas e amplamente aplicadas ao mercado.
+              Hoje eu sou desenvolvedor focado em front-end e busco aprender constantemente sobre desenvolvimento de sistemas web sempre focando em tecnologias modernas e amplamente aplicadas ao mercado.
             </p>
           </div>
       </Card>

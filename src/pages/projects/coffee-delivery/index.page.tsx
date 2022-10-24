@@ -44,7 +44,7 @@ export default function CoffeDelivery(){
       <Brief>
         <h2>O projeto</h2>
 
-        <p>Este projeto simula uma lojinha virtual onde se realiza pedidos de café para entrega em domicilio. Com uma proposta principal de estudos, as funcionalidades se limitam ao simples gerenciamento do carrinho de compras.</p>
+        <p>Este projeto simula uma lojinha virtual onde se realiza pedidos de café para entrega em domicílio. Com uma proposta principal de estudo, as funcionalidades se limitam ao simples gerenciamento do carrinho de compras.</p>
 
         <p>
           Nesta aplicação web o usuário terá acesso a um catálago de cafés disponíveis para delivery e poderá realizar as seguintes ações:
@@ -54,8 +54,8 @@ export default function CoffeDelivery(){
 
         <li>Filtrar a listagem de produtos por categorias</li>
         <li>Adicionar quantidades especificas de cada item no carrinho</li>
-        <li>Aumentar ou dimunuir a quantidade de items do carrinho.</li>
-        <li>Remover items do carrinho.</li>
+        <li>Aumentar ou dimunuir a quantidade de itens do carrinho.</li>
+        <li>Remover itens do carrinho.</li>
         <li>Preencher um fomulário com dados da entrega.</li>
         <li>Escolher o método de pagamento dentre as opções disponíveis.</li>
         </ul>

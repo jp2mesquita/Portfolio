@@ -58,7 +58,7 @@ export default function DTMoney(){
 
       <p>A plataforma conta com um sistema de busca de dados para que o usúário seja capaz de filtrar os tipos de transações aos quais deseja realizar em uma consulta parcial dos registros.</p>
 
-      <p>Além do react e da utilização de uma componentização adequada ao projeto para facilitar possíveis manunteções futuras, foi utilizado o Radix que trata-se de uma biblioteca que oferece componentes responsivos repletos de acessibilidade para aplicações em React. </p>      
+      <p>Além do React e da utilização de uma componentização adequada ao projeto para facilitar possíveis manunteções futuras, foi utilizado o Radix, uma biblioteca que oferece componentes responsivos, desvinculados de estilização prévia e repletos de acessibilidade para aplicações em React. </p>      
 
       <p><b>Este projeto conta com:</b></p>
 

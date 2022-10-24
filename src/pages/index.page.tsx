@@ -54,7 +54,7 @@ export default function Home() {
           <CardFooter>
             <div>
               <h2>Podcastr</h2>
-              <p>Manipulando áudios</p>
+              <p>Reproduzindo áudios</p>
             </div>
 
             <div>
@@ -103,7 +103,7 @@ export default function Home() {
         <CardFooter>
           <div>
             <h2>Github-Blog</h2>
-            <p>Conexão com api</p>
+            <p>Conexão com api do github</p>
           </div>
 
           <div>

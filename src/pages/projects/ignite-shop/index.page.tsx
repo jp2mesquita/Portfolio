@@ -51,7 +51,7 @@ export default function IgniteShop(){
       <Brief>
         <h2>O Projeto</h2>
       
-      <p>Este é o Ignite Shop, mais uma pequena simulação de ecommerce baseado em um desafio do programa Ignite (Trilha ReactJs) da <Link href={rocketseatLink} target='_blank'>Rocketseat</Link>. Com a finalidade de aprimorar o uso de APIs de forma integrada ao NextJS, utilizando as estratégias de Server Side Rendereing (SSR) e Static Site Generator (SSG), a atual versão conta com um layout simples oferecendo uma navegação descomplicada e extremamente rápida.</p> 
+      <p>Este é o Ignite Shop, mais uma pequena simulação de ecommerce baseado em um desafio do programa Ignite (Trilha ReactJs) da <Link href={rocketseatLink} target='_blank'>Rocketseat</Link>. Com a finalidade de aprimorar o conceitos envolvidos no consumo de APIs de forma integrada ao NextJS, utilizando as estratégias de Server Side Rendereing (SSR) e Static Site Generator (SSG), a atual versão conta com um layout simples oferecendo uma navegação descomplicada e extremamente rápida.</p> 
 
       <p>Nesta aplicação web o usuário terá acesso a um pequeno catálogo de camisetas e poderá então realizar as seguintes ações:</p>
 
@@ -63,7 +63,7 @@ export default function IgniteShop(){
           Remover items do carrinho de compras
         </li>
         <li>
-          Navegar para pagina de cada produto separadamente
+          Navegar para página de cada produto separadamente
         </li>
         <li>
           Finalizar a compra

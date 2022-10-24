@@ -80,7 +80,7 @@ export default function BeautySalon(){
         </p>
 
         <p>
-          Esta aplicação conta com design responsivo e simples proporcionando pro usúario uma experiência leve e fluída.
+          Esta aplicação conta com design responsivo e simples proporcionando ao usiário uma experiência leve e fluída.
         </p>
 
         <WebPicturesContainer >
@@ -105,7 +105,7 @@ export default function BeautySalon(){
         </p>
 
         <p>
-          Um dos grandes baratos desta aplicação foi utilizar o conceito de <i>mobile first</i>, onde eu desenvolvi primeiramente a versão mobile da página. Com o mundo cada vez mais moderno e com a certeza de que a cada dia aumenta o número de acessos a páginas web através de smartphones, poder contar com um design responsivo para as telinhas é um pré-requisito importantíssimo para qualquer aplicação.
+          Um dos grandes baratos desta aplicação foi utilizar o conceito de <i>mobile first</i>, onde eu desenvolvi primeiramente a versão mobile da página. Com o mundo cada vez mais moderno e com a certeza de que a cada dia aumenta o número de acessos a páginas web através de smartphones, poder contar com um design responsivo para as telinhas tornou-se um pré-requisito importantíssimo para qualquer aplicação.
         </p>
 
         <MobilePicturesContainer>
