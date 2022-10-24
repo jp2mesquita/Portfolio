@@ -15,7 +15,7 @@ import ExternalLinks from "../../../components/ExternalLinks";
 
 export default function githubBlog(){
 
-  const websiteLink = '#'
+  const websiteLink = 'https://github-blog-jp2mesquita.vercel.app/'
   const githubLink = 'https://github.com/jp2mesquita/github_blog_2'
   return(
     <Container>
@@ -41,9 +41,9 @@ export default function githubBlog(){
         <h2>O projeto</h2>
 
         <p>O Githubblog é exatamente o que o seu nome sugere, um blog montado a partir do github. Mas para ser mais detalhado trata-se de um blog que se alimenta das issues de um repositório no github.</p>
-        <p>Além das issues ele busca os dados do perfil do usuário pré registrado na aplicação, assim como nome, foto de perfil e número de seguidores.</p>
+        <p>Além das issues ele busca os dados do perfil de um usuário que foi pré registrado na aplicação, assim como nome, foto de perfil e número de seguidores.</p>
 
-        <p>Cada issue do repositório em questão se torna um post no blog. Está listagem é representada em umn catálogo com pequenos resumos sobre a postagem.</p>
+        <p>Cada issue do repositório em questão se torna um post no blog. Está listagem é representada em um catálogo com pequenos resumos sobre a postagem.</p>
 
 
         <div>
@@ -62,7 +62,7 @@ export default function githubBlog(){
 
       <p>Além de pode entrar na página do post que desejar, é possível realizar uma busca por palavras chaves para encontrar publicações com temas desejados.</p>
 
-      <p>Apesar de conter poucas funcionalidades a aplicaçõa conta com conceitos muito interessantes como o consumo da api do Github bem como o uso da React Router Dom, uma biblioteca javascript focada em roteamento para aplicações React.</p>
+      <p>Apesar de conter poucas funcionalidades a aplicação conta com conceitos muito interessantes como o consumo da api do Github bem como o uso da React Router Dom, uma biblioteca javascript focada em roteamento para aplicações React.</p>
 
       <p><b>O Projeto foi desenvolvido utilizando as seguintes ferramentas:</b></p>
 
