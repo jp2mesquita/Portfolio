@@ -83,7 +83,11 @@ export const LinksWrapper = styled.div`
       }
     }
   }
- 
+  @media (max-width: 1180px){
+    h3{
+      font-size: 1.5rem;
+    }
+  }
   @media (max-width: 800px){
     h3{
       font-size: 1.25rem;

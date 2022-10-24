@@ -166,7 +166,7 @@ export const Brief = styled.div`
 export const SkillsContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 2rem;
+  padding-block: 2rem;
   grid-template-rows: min-content;
   row-gap: 2rem;
   span{
