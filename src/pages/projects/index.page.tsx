@@ -14,6 +14,8 @@ import igniteShopLogo from '../../assets/ignite-shop-logo.svg'
 import beautySalonLogo from '../../assets/beauty-salon-logo.svg'
 import eventPlataformLogo from '../../assets/event-plataform-logo.svg'
 import dtMoneyLogo from '../../assets/dt-money-logo.svg'
+import amazonLogo from '../../assets/amazon-logo.svg'
+
 
 import { CardFooter, GridContainer, PageTitle } from "./styles";
 
@@ -30,16 +32,16 @@ export default function Projects(){
       <GridContainer>
 
         <Card noPadTop={true}>        
-          <Link href={'/projects/podcastr'}>
+          <Link href={'/projects/amazon-clone'}>
 
             <picture>
-              <Image src={podcastrLogo} alt='' width={250} height={200}   objectFit='fill'/>
+              <Image src={amazonLogo} alt='' objectFit='fill'/>
             </picture>
 
             <CardFooter>
               <div>
-                <h2>Podcastr</h2>
-                <p>Manipulando áudios</p>
+                <h2>Amazon Clone</h2>
+                <p>Faça o seu pedido</p>
               </div>
 
               <div>

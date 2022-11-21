@@ -11,6 +11,7 @@ import podcastrLogo from '../assets/podcastr-logo.svg'
 import nlwLogo from '../assets/nlw-esports-logo.svg'
 import igniteShopLogo from '../assets/ignite-shop-logo.svg'
 import beautySalonLogo from '../assets/beauty-salon-logo.svg'
+import amazonLogo from '../assets/amazon-logo.svg'
 
 import Avatar from "../components/Avatar";
 import Card from "../components/Card";
@@ -45,16 +46,16 @@ export default function Home() {
 
 
       <Card noPadTop={true}>        
-        <Link href={'/projects/podcastr'}>
+        <Link href={'/projects/amazon-clone'}>
 
           <picture>
-            <Image src={podcastrLogo} alt='' width={250} height={200}   objectFit='fill'/>
+            <Image src={amazonLogo} alt='' objectFit='fill'/>
           </picture>
 
           <CardFooter>
             <div>
-              <h2>Podcastr</h2>
-              <p>Reproduzindo áudios</p>
+              <h2>Amazon Clone</h2>
+              <p>Faça o seu pedido</p>
             </div>
 
             <div>
